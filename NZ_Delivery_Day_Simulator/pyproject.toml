@@ -1,0 +1,26 @@
+[project]
+name = "nz-delivery-day-simulator"
+version = "0.1.0"
+description = "NZ Delivery Day Change Simulator"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "numpy>=1.26",
+    "openpyxl>=3.1",
+    "pandas>=2.2",
+    "plotly>=5.24",
+    "pulp>=2.9",
+    "streamlit>=1.39",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.3", "ruff>=0.8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+ignore = ["F403", "F405", "E501"]
